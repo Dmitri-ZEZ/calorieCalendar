@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaloriesCalendar</title>
+
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk="
+            src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    <link crossorigin="anonymous"
+          href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
+          integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" rel="stylesheet"/>
+</head>
+</head>
+<body>
+<div class="container">
+    <h1>Авторизация</h1>
+    <p>Нажми <a th:href="@{/register}">сюда</a> для регистрации.</p>
+    <form method="POST" th:action="@{/login}" id="loginForm">
+        <label>Логин: </label>
+        <input class="form-control" required type="text" name="login" id="username" /><br/>
+        <label>Пароль: </label>
+        <input class="form-control" required type="password" name="password" id="password" /><br/>
+        <input class="btn btn-primary" type="submit" value="Войти"/>
+        <div class="text-danger" th:if="${error}">Неверный логин или пароль!</div>
+    </form>
+</div>
+
+
+<script crossorigin="anonymous"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
